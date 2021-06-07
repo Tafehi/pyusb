@@ -13,8 +13,8 @@ def main():
         print("No device has been found :_(")
     else:
 
-        print("Yeey. Find a device")
-        time.sleep(5 * 60)
+        print("Yeepy. Usb device is found :)")
+        time.sleep(5)
 
 
 if __name__ == "__main__":
