@@ -1,14 +1,13 @@
 #!/usr/bin/python3
 
-## import usb.core
-## import time
-
-
-## dev = usb.core.find(idVendor=0x0781, idProduct=0x5567)
-## ep = dev[0].interfaces()[0]
-
+import usb.core
 import time
+import usb.util
 
-while True:
-    print("This is a test python file!")
-    time.sleep(2)
+VID=0x0781, PID=0x5567 # Add your VID and PID using lsusb in linux
+dev = usb.core.find(idVendor=VID, idProduct=PID)
+if not dev:
+    print("No device has been found :(")
+    exit(1)
+else:
+    print("Yeey. Find a device")
