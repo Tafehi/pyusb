@@ -1,0 +1,11 @@
+[Unit]
+Description= scan the usb
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python /home/root/usb_scan.py
+StandardInput=tty-force
+
+[Install]
+WantedBy=multi-user.target
