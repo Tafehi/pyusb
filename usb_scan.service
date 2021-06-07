@@ -4,7 +4,7 @@ After=multi-user.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/python /home/root/usb_scan.py
+ExecStart=/usr/bin/python3 /usr/local/bin/usb_scan.py
 StandardInput=tty-force
 
 [Install]
