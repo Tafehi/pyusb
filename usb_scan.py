@@ -34,9 +34,26 @@ def main():
         # get endpoint 0x82
         ep82 = intf[1]
         print(f"Endpoint Address IN is {ep82.bEndpointAddress}")
-        
+    
+        print(ep1)
+        print(ep82)
         time.sleep(5) #TODO change 5 sec. to 5 min.
         
 
 if __name__ == "__main__":
     main()
+
+
+#device = os.popen('sudo blkid').readlines()
+#print(device)
+#usbs= []
+#for u in device:
+#    loc = [u.split(':')[0]]
+#    if 'dev/sd' not in loc[0]:
+#        continue
+    
+#    loc+=re.findall(r'"["]+"',u)
+#    columns = ['loc']+re.findall(r'\b(\w+)=',u)
+#    usbs.append(dict(zip(columns,loc)))
+#    for u in usbs:
+#        print(usb.core.USBTimeoutError)
