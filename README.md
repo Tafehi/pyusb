@@ -10,10 +10,12 @@ Use Python for scripting
 
 
 ## Read usb via linux service
-- To read all usb devices on Linux use `lsusb` to find Device id
+- To read all the devices on Linux use `lsusb` to find Device id
 - to read `idVendor` and `idProduct` use  `lsusb -D /dev/bus/usb/001/<Device id>`
 ![](lsusb.PNG)
 
+## OR
+- Use `sudo blkid | grep /dev/sd` to see all usb disks.
 ## How to run it
 
 1. Install python3 and pip3 followed by `sudo pip3 install pyusb`
